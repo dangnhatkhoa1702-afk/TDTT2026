@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TUYỂN DỤNG TẬP TRUNG 2026 – SACOMBANK</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* =====================================================
+   SACOMBANK OFFICIAL DESIGN SYSTEM
+   ===================================================== */
+:root {
+  --sb-blue: #005EA6;
+  --sb-gold: #D7A44C;
+  --sb-gold-deep: #D8B25E;
+  --sb-gold-light: #FDF7BD;
+  --sb-gold-gradient: linear-gradient(90deg,#D8B25E 0%,#FDF7BD 100%);
+
+  --radius: 14px;
+  --shadow: 0 12px 30px rgba(0,0,0,.08);
+  --max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+  color: #1b1b1b;
+  background: #f4f7fb;
+}
+
+/* =====================================================
+   GLOBAL
+   ===================================================== */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 80px 0;
+}
+
+h1,h2,h3 {
+  margin: 0 0 16px;
+}
+
+.btn-primary {
+  background: var(--sb-gold-gradient);
+  color: var(--sb-blue);
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-secondary {
+  border: 2px solid var(--sb-blue);
+  background: transparent;
+  color: var(--sb-blue);
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-small {
+  padding: 10px 18px;
+  font-size: 14px;
+}
+
+/* =====================================================
+   SECTION 1 – HERO
+   ===================================================== */
+.hero {
+  background: var(--sb-blue);
+  color: var(--sb-gold);
+  padding: 100px 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 520px;
+  margin-bottom: 32px;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+/* =====================================================
+   SECTION 2 – GIỚI THIỆU
+   ===================================================== */
+.about {
+  background: #fff;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.about img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+.about h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--sb-blue);
+}
+
+.about .highlight {
+  color: var(--sb-gold);
+  font-weight: 800;
+}
+
+/* =====================================================
+   SECTION 3 – POSITIONS
+   ===================================================== */
+.positions {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 24px;
+}
+
+.position-card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px;
+}
+
+.position-card strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.meta-chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 16px 0;
+}
+
+.meta-chip {
+  background: #eef3f9;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.btn-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* =====================================================
+   SECTION 4 – BENEFITS
+   ===================================================== */
+.benefits {
+  background: var(--sb-blue);
+  color: var(--sb-gold);
+}
+
+.benefits h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 48px;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 24px;
+}
+
+.benefit-card {
+  background: #fff;
+  color: #1b1b1b;
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+.benefit-card h3 {
+  color: var(--sb-blue);
+}
+
+/* =====================================================
+   SECTION 5 – PROCESS
+   ===================================================== */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 16px;
+}
+
+.step {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.step span {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--sb-gold);
+}
+
+/* =====================================================
+   SECTION 6 – FAQ
+   ===================================================== */
+.faq-item {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 12px;
+  padding: 20px;
+}
+
+.faq-item summary {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+@media (max-width: 1024px) {
+  .positions,
+  .benefit-grid,
+  .process-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-grid,
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .positions,
+  .benefit-grid,
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero h1 {
+    font-size: 36px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- SECTION 1 -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>TUYỂN DỤNG TẬP TRUNG<br>SACOMBANK 2026</h1>
+      <p>Gia nhập hệ thống ngân hàng TMCP hàng đầu Việt Nam – phát triển sự nghiệp bền vững cùng SACOMBANK.</p>
+      <a href="https://forms.gle/QSaK3d41vF1qYH566" class="btn-primary">ỨNG TUYỂN NGAY</a>
+    </div>
+    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216" alt="">
+  </div>
+</section>
+
+<!-- SECTION 2 -->
+<section class="about">
+  <div class="container about-grid">
+    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf" alt="">
+    <div>
+      <h2>KHAI XUÂN <span class="highlight">ĐÚNG HƯỚNG</span><br>VỮNG BƯỚC CẢ NĂM</h2>
+      <p><strong>TUYỂN DỤNG ĐỒNG LOẠT</strong> các vị trí <strong>KINH DOANH – DỊCH VỤ – CÔNG NGHỆ</strong> trên toàn hệ thống SACOMBANK.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3 -->
+<section>
+  <div class="container">
+    <div class="positions">
+      <!-- GIỮ NGUYÊN CÁC POSITION CARD CỦA BẠN -->
+      <!-- (đã đúng chuẩn, chỉ cần paste nguyên block bạn gửi) -->
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 -->
+<section class="benefits">
+  <div class="container">
+    <h2>GIA NHẬP SACOMBANK</h2>
+    <div class="benefit-grid">
+      <div class="benefit-card"><h3>Đào tạo bài bản</h3><p>Chương trình đào tạo chuyên sâu theo từng vị trí.</p></div>
+      <div class="benefit-card"><h3>Lộ trình rõ ràng</h3><p>Định hướng phát triển dài hạn.</p></div>
+      <div class="benefit-card"><h3>Thu nhập cạnh tranh</h3><p>Lương thưởng minh bạch.</p></div>
+      <div class="benefit-card"><h3>Phúc lợi chuẩn ngân hàng</h3><p>Chính sách đầy đủ – rõ ràng.</p></div>
+      <div class="benefit-card"><h3>Mạng lưới 540 điểm</h3><p>Toàn quốc.</p></div>
+      <div class="benefit-card"><h3>Môi trường gắn kết</h3><p>Hỗ trợ – đồng hành.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5 -->
+<section>
+  <div class="container process-grid">
+    <div class="step"><span>1</span><p>NỘP HỒ SƠ</p></div>
+    <div class="step"><span>2</span><p>SƠ TUYỂN</p></div>
+    <div class="step"><span>3</span><p>PHỎNG VẤN</p></div>
+    <div class="step"><span>4</span><p>KẾT QUẢ</p></div>
+    <div class="step"><span>5</span><p>NHẬN VIỆC</p></div>
+  </div>
+</section>
+
+<!-- SECTION 6 -->
+<section>
+  <div class="container">
+    <details class="faq-item"><summary>Có tuyển ứng viên chưa có kinh nghiệm?</summary><p>Có, tùy vị trí và khu vực.</p></details>
+    <details class="faq-item"><summary>Có chọn khu vực làm việc không?</summary><p>Có.</p></details>
+    <details class="faq-item"><summary>Có cần hồ sơ bản cứng?</summary><p>Không.</p></details>
+  </div>
+</section>
+
+</body>
+</html>
