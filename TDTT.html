@@ -11,675 +11,255 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --sb-blue: #005EA6;
-            --sb-gold: #D7A44C;
-            --sb-gold-deep: #D8B25E;
-            --sb-gold-light: #FDF7BD;
-            --sb-white: #FFFFFF;
-            --sb-gray-light: #F8F9FA;
-            --sb-gray: #6C757D;
-            --sb-dark: #212529;
-            --sb-gold-gradient: linear-gradient(90deg, #D8B25E 0%, #FDF7BD 100%);
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            color: var(--sb-dark);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Typography */
-        h1, h2, h3 {
-            font-family: Arial, sans-serif;
-            font-weight: 700;
-            line-height: 1.2;
-        }
-
-        /* Hero Section */
-        .hero {
-            position: relative;
-            width: 100%;
-        }
-
-        .hero-banner {
-            width: 100%;
-            height: 70vh;
-            min-height: 500px;
-            max-height: 800px;
-            background-image: url('https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TDTT2026/main/banner.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
-        }
-
-        .hero-cta-section {
-            background: var(--sb-white);
-            padding: 40px 20px;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-cta-section h1 {
-            font-size: clamp(1.75rem, 4vw + 0.5rem, 3rem);
-            color: var(--sb-gold);
-            margin-bottom: 24px;
-            font-weight: 800;
-            line-height: 1.3;
-            letter-spacing: 0.5px;
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        .hero-subtitle {
-            font-size: clamp(0.95rem, 1.8vw + 0.25rem, 1.3rem);
-            color: var(--sb-gold-light);
-            margin-bottom: 16px;
-            font-weight: 600;
-            animation: fadeInUp 0.8s ease-out 0.1s both;
-            letter-spacing: 1px;
-        }
-
-        .hero-description {
-            font-size: clamp(0.95rem, 1.5vw + 0.2rem, 1.15rem);
-            color: var(--sb-white);
-            margin-bottom: 40px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            animation: fadeInUp 0.8s ease-out 0.2s both;
-            line-height: 1.7;
-            font-weight: 400;
-        }
-        .cta-primary {
-            background: var(--sb-gold-gradient);
-            color: var(--sb-blue);
-            font-family: Arial, sans-serif;
-            font-size: clamp(1.1rem, 1.8vw + 0.3rem, 1.3rem);
-            font-weight: 700;
-            padding: 20px 56px;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 8px 24px rgba(215, 164, 76, 0.4);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            position: relative;
-            animation: pulse-glow 2s ease-in-out infinite;
-        }
-
-        .cta-primary:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 12px 40px rgba(215, 164, 76, 0.6);
-            animation: none;
-        }
-
-        .cta-primary:active {
-            transform: translateY(-1px) scale(0.98);
-        }
-
-        @keyframes pulse-glow {
-            0%, 100% {
-                box-shadow: 0 8px 24px rgba(215, 164, 76, 0.4),
-                            0 0 0 0 rgba(215, 164, 76, 0.7);
-            }
-            50% {
-                box-shadow: 0 8px 32px rgba(215, 164, 76, 0.6),
-                            0 0 20px 10px rgba(215, 164, 76, 0);
-            }
-        }
-
-        /* Section Styles */
-        section {
-            padding: 60px 40px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: clamp(2rem, 4vw, 3rem);
-            text-align: center;
-            margin-bottom: 64px;
-            color: var(--sb-blue);
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: var(--sb-gold-gradient);
-            margin: 24px auto 0;
-            border-radius: 2px;
-        }
-
-        /* Program Introduction */
-        .program-intro {
-            background: var(--sb-white);
-            padding: 50px 40px;
-        }
-
-        .intro-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 48px;
-            align-items: center;
-        }
-
-        .intro-image {
-            width: 100%;
-            height: 500px;
-            background-image: url('https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TDTT2026/main/hero.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            border-radius: 16px;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 8px 24px rgba(0, 94, 166, 0.15);
-        }
-
-        .intro-card-wrapper {
-            background: var(--sb-white);
-            border: 3px solid var(--sb-gold);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 8px 32px rgba(215, 164, 76, 0.15);
-        }
-
-        .intro-content h2 {
-            font-size: 24px;
-            color: var(--sb-blue);
-            margin-bottom: 24px;
-            line-height: 1.4;
-        }
-
-        .intro-highlight {
-            background: var(--sb-gold-gradient);
-            color: var(--sb-blue);
-            padding: 3px 10px;
-            border-radius: 6px;
-            font-weight: 700;
-            display: inline-block;
-            font-size: 16px;
-        }
-
-        .intro-content p {
-            font-size: 1.125rem;
-            color: var(--sb-gray);
-            margin-bottom: 16px;
-            line-height: 1.7;
-        }
-
-        .intro-content p strong {
-            color: var(--sb-blue);
-            font-weight: 600;
-        }
-
-        .intro-image {
-            width: 100%;
-            height: 500px;
-            background-image: url('https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TDTT2026/main/hero.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            border-radius: 16px;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 94, 166, 0.2);
-        }
-
-        .intro-content h2 {
-            font-size: clamp(1.75rem, 3vw, 2.5rem);
-            color: var(--sb-blue);
-            margin-bottom: 24px;
-            line-height: 1.3;
-        }
-
-        .intro-highlight {
-            background: var(--sb-gold-gradient);
-            color: var(--sb-blue);
-            padding: 3px 12px;
-            border-radius: 4px;
-            font-weight: 700;
-        }
-
-        .intro-content p {
-            font-size: 1.125rem;
-            color: var(--sb-gray);
-            margin-bottom: 16px;
-        }
-
-        /* Positions Section */
-        .positions-section {
-            background: var(--sb-white);
-        }
-
-        .positions {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 32px;
-        }
-
-        .position-card {
-            background: var(--sb-white);
-            border-radius: 16px;
-            padding: 40px 32px;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            text-align: center;
-        }
-
-        .position-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 48px rgba(0, 94, 166, 0.15);
-            border-color: var(--sb-gold);
-        }
-
-        .position-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--sb-gold-gradient);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 40px;
-            margin: 0 auto 24px;
-        }
-
-        .position-card h3 {
-            font-size: 14px;
-            color: var(--sb-gray);
-            margin-bottom: 12px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .position-card > p {
-            color: var(--sb-blue);
-            margin-bottom: 16px;
-            line-height: 1.6;
-            font-size: 18px;
-            font-weight: 700;
-        }
-
-        .position-description {
-            color: var(--sb-gray) !important;
-            font-size: 15px !important;
-            font-weight: 400 !important;
-            margin-bottom: 20px !important;
-            line-height: 1.6;
-        }
-
-        .meta-chips {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 24px;
-            justify-content: center;
-        }
-
-        .meta-chip {
-            background: var(--sb-gray-light);
-            color: var(--sb-gray);
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        .btn-row {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .btn {
-            padding: 12px 24px;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s ease;
-            border: 2px solid;
-            cursor: pointer;
-            font-size: 14px;
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
-
-        .btn-small {
-            padding: 12px 28px;
-            font-size: 14px;
-            letter-spacing: 1px;
-        }
-
-        .btn-primary {
-            background: var(--sb-gold-gradient);
-            color: var(--sb-blue);
-            border-color: transparent;
-            box-shadow: 0 4px 12px rgba(215, 164, 76, 0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(215, 164, 76, 0.4);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--sb-blue);
-            border-color: var(--sb-blue);
-        }
-
-        .btn-secondary:hover {
-            background: var(--sb-blue);
-            color: var(--sb-white);
-        }
-
-        /* Benefits Section */
-        .benefits-section {
-            background: var(--sb-blue);
-            color: var(--sb-white);
-        }
-
-        .benefits-section .section-title {
-            color: var(--sb-gold);
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 32px;
-        }
-
-        .benefit-card {
-            background: var(--sb-white);
-            padding: 32px;
-            border-radius: 12px;
-            transition: transform 0.3s ease;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-4px);
-        }
-
-        .benefit-icon {
-            font-size: 48px;
-            margin-bottom: 16px;
-        }
-
-        .benefit-card h3 {
-            font-size: 1.25rem;
-            color: var(--sb-blue);
-            margin-bottom: 12px;
-        }
-
-        .benefit-card p {
-            color: var(--sb-gray);
-            line-height: 1.7;
-        }
-
-        /* Timeline Section */
-        .timeline-section {
-            background: var(--sb-gray-light);
-        }
-
-        .timeline {
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 28px;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: var(--sb-gold-gradient);
-        }
-
-        .timeline-item {
-            display: grid;
-            grid-template-columns: auto 1fr;
-            gap: 24px;
-            margin-bottom: 48px;
-            align-items: flex-start;
-        }
-
-        .timeline-content {
-            background: var(--sb-white);
-            padding: 24px 32px;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-            text-align: left;
-        }
-
-        .timeline-number {
-            width: 56px;
-            height: 56px;
-            background: var(--sb-gold-gradient);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--sb-blue);
-            box-shadow: 0 4px 12px rgba(215, 164, 76, 0.3);
-            z-index: 1;
-            flex-shrink: 0;
-        }
-
-        .timeline-content h3 {
-            font-size: 20px;
-            color: var(--sb-blue);
-            margin-bottom: 8px;
-        }
-
-        .timeline-content p {
-            color: var(--sb-gray);
-            font-size: 15px;
-            line-height: 1.6;
-        }
-
-        /* FAQ Section */
-        .faq-section {
-            background: var(--sb-white);
-        }
-
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background: var(--sb-white);
-            border: 2px solid var(--sb-gray-light);
-            border-radius: 12px;
-            margin-bottom: 16px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .faq-item:hover {
-            border-color: var(--sb-gold);
-        }
-
-        .faq-question {
-            padding: 24px 32px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 600;
-            color: var(--sb-blue);
-            font-size: 1.1rem;
-            transition: background 0.3s ease;
-        }
-
-        .faq-question:hover {
-            background: var(--sb-gray-light);
-        }
-
-        .faq-toggle {
-            font-size: 1.5rem;
-            transition: transform 0.3s ease;
-            color: var(--sb-gold);
-        }
-
-        .faq-item.active .faq-toggle {
-            transform: rotate(45deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s ease;
-            padding: 0 32px;
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 500px;
-            padding: 0 32px 24px;
-        }
-
-        .faq-answer p {
-            color: var(--sb-gray);
-            line-height: 1.8;
-        }
-
-        /* CTA Footer */
-        .cta-footer {
-            background: var(--sb-blue);
-            color: var(--sb-white);
-            text-align: center;
-            padding: 80px 40px;
-        }
-
-        .cta-footer h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            color: var(--sb-gold);
-            margin-bottom: 24px;
-        }
-
-        .cta-footer p {
-            font-size: 1.25rem;
-            margin-bottom: 40px;
-            color: var(--sb-gold-light);
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive */
-        @media (max-width: 968px) {
-            .intro-wrapper {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-
-            .intro-card-wrapper {
-                padding: 32px 24px;
-            }
-
-            .intro-image {
-                height: 400px;
-            }
-
-            section {
-                padding: 60px 24px;
-            }
-
-            .program-intro {
-                padding: 40px 24px;
-            }
-
-            .hero-banner {
-                height: 50vh;
-                min-height: 400px;
-            }
-
-            .hero-cta-section {
-                padding: 40px 20px;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .intro-wrapper {
-                grid-template-columns: 1fr;
-            }
-
-            .intro-card-wrapper {
-                padding: 24px 20px;
-                border-width: 2px;
-            }
-
-            .intro-image {
-                height: 300px;
-            }
-
-            .positions {
-                grid-template-columns: 1fr;
-            }
-
-            .benefits-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .btn-row {
-                flex-direction: column;
-            }
-
-            .btn,
-            .btn-small {
-                text-align: center;
-                width: 100%;
-            }
-
-            .cta-primary {
-                padding: 18px 42px;
-                font-size: 1rem;
-            }
-
-            .hero-banner {
-                height: 40vh;
-                min-height: 300px;
-            }
-
-            .hero-cta-section {
-                padding: 32px 16px;
-            }
-        }
-            }
-        }
+       /* =====================================================
+   ROOT VARIABLES
+   ===================================================== */
+:root {
+  --sb-blue: #005EA6;
+  --sb-gold: #D7A44C;
+  --sb-gold-deep: #D8B25E;
+  --sb-gold-light: #FDF7BD;
+  --sb-white: #FFFFFF;
+  --sb-gray-light: #F8F9FA;
+  --sb-gray: #6C757D;
+  --sb-dark: #212529;
+  --sb-gold-gradient: linear-gradient(90deg, #D8B25E 0%, #FDF7BD 100%);
+}
+
+/* =====================================================
+   BASE
+   ===================================================== */
+body {
+  font-family: Arial, sans-serif;
+  color: var(--sb-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* =====================================================
+   GLOBAL SECTION – CHUYỂN NỀN SANG XANH
+   ===================================================== */
+section {
+  background: var(--sb-blue);
+  padding: 60px 40px;
+}
+
+section,
+section p {
+  color: var(--sb-white);
+}
+
+/* title vẫn dùng xanh + gạch vàng */
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-align: center;
+  margin-bottom: 64px;
+  color: var(--sb-gold);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--sb-gold-gradient);
+  margin: 24px auto 0;
+  border-radius: 2px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =====================================================
+   HERO (GIỮ NGUYÊN)
+   ===================================================== */
+.hero {
+  position: relative;
+  width: 100%;
+}
+
+.hero-banner {
+  width: 100%;
+  height: 70vh;
+  min-height: 500px;
+  max-height: 800px;
+  background-image: url('https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TDTT2026/main/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-cta-section {
+  background: var(--sb-white);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* =====================================================
+   PROGRAM INTRO
+   ===================================================== */
+.program-intro {
+  background: var(--sb-blue);
+  padding: 50px 40px;
+}
+
+.intro-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 48px;
+  align-items: center;
+}
+
+.intro-image {
+  width: 100%;
+  height: 500px;
+  background-image: url('https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TDTT2026/main/hero.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 94, 166, 0.2);
+}
+
+.intro-card-wrapper {
+  background: var(--sb-white);
+  border: 3px solid var(--sb-gold);
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.intro-content h2 {
+  color: var(--sb-blue);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  margin-bottom: 24px;
+}
+
+.intro-content p {
+  color: var(--sb-gray);
+  font-size: 1.125rem;
+  margin-bottom: 16px;
+}
+
+/* =====================================================
+   POSITIONS
+   ===================================================== */
+.positions-section {
+  background: #004f8d;
+}
+
+.positions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.position-card {
+  background: var(--sb-white);
+  border-radius: 16px;
+  padding: 40px 32px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.position-card h3 {
+  color: var(--sb-gray);
+  text-transform: uppercase;
+}
+
+.position-card p {
+  color: var(--sb-blue);
+  font-weight: 700;
+}
+
+.position-description {
+  color: var(--sb-gray);
+}
+
+/* =====================================================
+   BENEFITS
+   ===================================================== */
+.benefits-section {
+  background: var(--sb-blue);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.benefit-card {
+  background: var(--sb-white);
+  padding: 32px;
+  border-radius: 12px;
+}
+
+.benefit-card h3 {
+  color: var(--sb-blue);
+}
+
+.benefit-card p {
+  color: var(--sb-gray);
+}
+
+/* =====================================================
+   TIMELINE (GIỮ NỀN SÁNG)
+   ===================================================== */
+.timeline-section {
+  background: var(--sb-gray-light);
+}
+
+.timeline-content {
+  background: var(--sb-white);
+  padding: 24px 32px;
+  border-radius: 12px;
+}
+
+.timeline-content h3 {
+  color: var(--sb-blue);
+}
+
+.timeline-content p {
+  color: var(--sb-gray);
+}
+
+/* =====================================================
+   FAQ
+   ===================================================== */
+.faq-section {
+  background: var(--sb-blue);
+}
+
+.faq-item {
+  background: var(--sb-white);
+  border-radius: 12px;
+}
+
+.faq-question {
+  color: var(--sb-blue);
+}
+
+.faq-answer p {
+  color: var(--sb-gray);
+}
+
+/* =====================================================
+   CTA FOOTER
+   ===================================================== */
+.cta-footer {
+  background: var(--sb-blue);
+  color: var(--sb-white);
+}
     </style>
 </head>
 <body>
