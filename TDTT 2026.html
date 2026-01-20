@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TUYỂN DỤNG TẬP TRUNG 2026 – ĐỢT 1 | SACOMBANK</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+    /* =====================================================
+       SACOMBANK OFFICIAL DESIGN SYSTEM (STANDARD)
+       ===================================================== */
+    :root {
+      /* Official colors */
+      --sb-blue: #005EA6;           /* Pantone 005EA6 */
+      --sb-gold: #D7A44C;           /* Pantone 7744C */
+      --sb-gold-deep: #D8B25E;
+      --sb-gold-light: #FDF7BD;
+
+      /* Gradient */
+      --sb-gold-gradient: linear-gradient(
+        90deg,
+        #D8B25E 0%,
+        #FDF7BD 100%
+      );
+
+      /* Neutral */
+      --sb-white: #FFFFFF;
+      --sb-bg: #F8FBFF;
+      --sb-text-dark: #0A2A4A;
+
+      /* UI */
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --radius-sm: 10px;
+      --max-width: 1100px;
+      --shadow-soft: 0 8px 24px rgba(0,0,0,.06);
+      --shadow-strong: 0 14px 40px rgba(0,0,0,.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+      background: var(--sb-bg);
+      color: var(--sb-text-dark);
+      line-height: 1.6;
+    }
+
+
+    button, input, select, textarea {
+      font-family: inherit;
+    }
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h1, h2 {
+      margin: 0 0 14px;
+      font-weight: 800;
+    }
+
+    h1 { font-size: 38px; }
+    h2 { font-size: 30px; color: var(--sb-blue); }
+
+    p { margin: 0 0 14px; }
+
+    /* =====================================================
+       TOP SCROLL BAR (STICKY NAV)
+       ===================================================== */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(248, 251, 255, 0.78);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(10, 42, 74, 0.08);
+      transition: .25s;
+    }
+
+    .topbar.scrolled {
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+
+    .topbar-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .topbar-right {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      white-space: nowrap;
+    }
+
+    .topbar-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--sb-blue);
+      font-weight: 900;
+      letter-spacing: .8px;
+      white-space: nowrap;
+    }
+
+    .topbar-logo-img {
+      height: 26px;
+      width: auto;
+      display: block;
+    }
+
+    .topbar-logo .mark {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--sb-gold-gradient);
+      box-shadow: 0 6px 18px rgba(215,164,76,.35);
+    }
+
+    .topbar-title {
+      text-decoration: none;
+      font-weight: 900;
+      color: var(--sb-blue);
+      letter-spacing: 1px;
+      font-size: 13px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,94,166,.18);
+      background: rgba(255,255,255,.55);
+    }
+
+    .topbar-cta {
+      /* kept for backwards compatibility; layout handled by .topbar-right */
+    }
+
+    /* =====================================================
+       BUTTON
+       ===================================================== */
+    .btn-primary {
+      display: inline-block;
+      padding: 14px 32px;
+      border-radius: 999px;
+      background: var(--sb-gold-gradient);
+      color: var(--sb-blue);
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(215,164,76,.45);
+      transition: .25s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(215,164,76,.6);
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      padding: 14px 26px;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--sb-blue);
+      font-weight: 800;
+      text-decoration: none;
+      border: 2px solid rgba(0,94,166,.25);
+      box-shadow: 0 6px 18px rgba(0,0,0,.05);
+      transition: .25s;
+      cursor: pointer;
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-3px);
+      border-color: rgba(0,94,166,.45);
+      box-shadow: 0 10px 28px rgba(0,0,0,.08);
+    }
+
+    .btn-small {
+      padding: 11px 20px;
+      font-size: 13px;
+    }
+
+    /* =====================================================
+       HERO (BLUE BACKGROUND – GOLD TEXT)
+       ===================================================== */
+    .hero {
+      background: var(--sb-blue);
+      border-radius: var(--radius-lg);
+      padding: 64px 48px;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 40px;
+      align-items: center;
+      box-shadow: var(--shadow-strong);
+    }
+
+    .hero .tag {
+      display: inline-block;
+      border: 1px solid var(--sb-gold);
+      color: var(--sb-gold);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .hero h1,
+    .hero p {
+      color: var(--sb-gold); /* RULE: BLUE BG -> GOLD TEXT */
+    }
+
+    .hero img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+
+    /* =====================================================
+       POSITIONS
+       ===================================================== */
+    .positions {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+      margin-top: 36px;
+    }
+
+    .position-card {
+      background: var(--sb-white);
+      padding: 32px 26px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-soft);
+      text-align: center;
+      transition: .3s;
+      border-top: 4px solid var(--sb-gold);
+    }
+
+    .position-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-strong);
+    }
+
+    .position-card strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: var(--sb-blue);
+    }
+
+    .position-card p {
+      font-size: 14px;
+      color: var(--sb-text-dark);
+      min-height: 44px;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    /* =====================================================
+       MODAL / POPUP
+       ===================================================== */
+    .modal {
+      position: fixed;
+      inset: 0;
+      display: none;
+      z-index: 1200;
+    }
+
+    .modal.is-open {
+      display: block;
+    }
+
+    .modal-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 42, 74, 0.55);
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+      animation: fadeIn .18s ease-out;
+    }
+
+    .modal-dialog {
+      position: relative;
+      max-width: 860px;
+      margin: 8vh auto 0;
+      background: var(--sb-white);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 20px 70px rgba(0,0,0,.25);
+      overflow: hidden;
+      transform: translateY(10px);
+      animation: slideUp .2s ease-out forwards;
+    }
+
+    .modal-header {
+      background: var(--sb-blue);
+      color: var(--sb-gold);
+      padding: 22px 26px;
+    }
+
+    .modal-header h3 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: .4px;
+    }
+
+    .modal-content {
+      padding: 22px 26px 26px;
+      color: var(--sb-text-dark);
+    }
+
+    .modal-content h4 {
+      margin: 18px 0 10px;
+      color: var(--sb-blue);
+      font-size: 15px;
+      letter-spacing: .2px;
+    }
+
+    .modal-content ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .modal-content li {
+      margin: 6px 0;
+    }
+
+    .modal-actions {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+      padding: 0 26px 26px;
+      flex-wrap: wrap;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.35);
+      background: rgba(255,255,255,.12);
+      color: var(--sb-gold);
+      font-size: 22px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .modal-close:hover {
+      background: rgba(255,255,255,.22);
+      transform: translateY(-1px);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* =====================================================
+       WHY
+       ===================================================== */
+    .why {
+      margin-top: 70px;
+      background: var(--sb-white);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 28px;
+    }
+
+    .why-card {
+      background: var(--sb-bg);
+      padding: 22px;
+      border-radius: var(--radius-md);
+      text-align: center;
+      font-weight: 600;
+      color: var(--sb-blue);
+      border-left: 4px solid var(--sb-gold);
+    }
+
+    /* =====================================================
+       PROCESS
+       ===================================================== */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 22px;
+      margin-top: 30px;
+    }
+
+    .step {
+      background: var(--sb-white);
+      padding: 22px;
+      border-radius: var(--radius-md);
+      text-align: center;
+      font-weight: 600;
+      box-shadow: var(--shadow-soft);
+      color: var(--sb-blue);
+    }
+
+    /* =====================================================
+       CTA FINAL (BLUE BG – GOLD TEXT)
+       ===================================================== */
+    .cta-final {
+      margin-top: 80px;
+      background: var(--sb-blue);
+      color: var(--sb-gold);
+      padding: 56px 32px;
+      border-radius: var(--radius-lg);
+      text-align: center;
+      box-shadow: var(--shadow-strong);
+    }
+
+    .cta-final h2,
+    .cta-final p {
+      color: var(--sb-gold);
+    }
+
+    /* =====================================================
+       RESPONSIVE
+       ===================================================== */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 48px 24px;
+      }
+      h1 { font-size: 32px; }
+      h2 { font-size: 26px; }
+      .topbar-inner {
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 16px;
+        text-align: center;
+      }
+      .topbar-right { justify-content: center; flex-wrap: wrap; }
+      .modal-dialog {
+        width: calc(100% - 24px);
+        margin: 10vh auto 0;
+      }
+      .modal-actions {
+        justify-content: center;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { scroll-behavior: auto !important; }
+      .btn-primary, .btn-secondary, .position-card, .modal-overlay, .modal-dialog { transition: none !important; animation: none !important; }
+    }
+  
+
+    /* =====================================================
+       HERO BANNER PLACEHOLDER (UNDER TOPBAR)
+       ===================================================== */
+    .hero-banner-wrap {
+      padding: 18px 20px 0;
+    }
+
+    .hero-banner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      height: 230px;
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,.65);
+      border: 2px dashed rgba(0,94,166,.22);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    /* =====================================================
+       FILTER CHIPS (QUICK FILTER)
+       ===================================================== */
+    .filter-bar {
+      margin: 16px 0 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .filter-group {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      background: rgba(255,255,255,.65);
+      border: 1px solid rgba(10, 42, 74, 0.08);
+      border-radius: 999px;
+      box-shadow: 0 8px 20px rgba(0,0,0,.04);
+    }
+
+    .filter-label {
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .2px;
+      color: var(--sb-blue);
+      margin-right: 2px;
+      white-space: nowrap;
+    }
+
+    .chip-btn {
+      border: 1px solid rgba(0,94,166,.18);
+      background: rgba(248,251,255,.85);
+      color: var(--sb-blue);
+      font-weight: 800;
+      font-size: 12px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: .2s;
+      line-height: 1;
+    }
+
+    .chip-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(0,0,0,.06);
+      border-color: rgba(0,94,166,.35);
+    }
+
+    .chip-btn.is-active {
+      background: var(--sb-gold-gradient);
+      color: var(--sb-blue);
+      border-color: rgba(215,164,76,.55);
+      box-shadow: 0 10px 22px rgba(215,164,76,.28);
+    }
+
+    /* =====================================================
+       CARD META CHIPS
+       ===================================================== */
+    .meta-chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 12px 0 2px;
+    }
+
+    .meta-chip {
+      font-size: 12px;
+      font-weight: 800;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,94,166,.16);
+      background: rgba(248,251,255,.85);
+      color: var(--sb-blue);
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 900px) {
+      .hero-banner { height: 190px; }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP SCROLL BAR -->
+  <header class="topbar" id="topbar">
+    <div class="topbar-inner">
+      <!-- Logo -->
+      <a class="topbar-logo" href="#top" aria-label="SACOMBANK">
+        <img class="topbar-logo-img" src="logo-sacombank.png" alt="SACOMBANK">
+      </a>
+
+      <div class="topbar-right">
+        <a class="topbar-title" href="#positions">VỊ TRÍ TUYỂN DỤNG</a>
+        <a class="btn-primary btn-small topbar-cta" href="https://forms.gle/QSaK3d41vF1qYH566" target="_blank" rel="noopener noreferrer">ỨNG TUYỂN NGAY</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO BANNER (placeholder - bạn sẽ thay ảnh sau) -->
+  <section class="hero-banner-wrap" aria-label="Banner tuyển dụng">
+    <div class="hero-banner" id="hero-banner"><!-- Chừa trống khung: bạn sẽ thay ảnh banner sau --></div>
+  </section>
+
+  <div id="top"></div>
+
+  <div class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <span class="tag">TUYỂN DỤNG TẬP TRUNG 2026 – ĐỢT 1</span>
+        <h1>KHAI XUÂN ĐÚNG HƯỚNG<br>VỮNG BƯỚC CẢ NĂM</h1>
+        <p>
+          TUYỂN DỤNG ĐỒNG LOẠT CÁC VỊ TRÍ KINH DOANH – DỊCH VỤ – CÔNG NGHỆ
+          TRÊN TOÀN HỆ THỐNG SACOMBANK.
+        </p>
+        <a href="https://forms.gle/QSaK3d41vF1qYH566" class="btn-primary" target="_blank" rel="noopener noreferrer">NỘP HỒ SƠ NGAY</a>
+      </div>
+      <div>
+        <img src="https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TTV-TN-2026/main/OPTION-2.1.jpg" alt="SACOMBANK Recruitment">
+      </div>
+    </section>
+
+    <!-- POSITIONS -->
+    <section id="positions">
+      <h2>VỊ TRÍ ĐANG TUYỂN</h2>
+
+      <!-- QUICK FILTER (chips) -->
+      <div class="filter-bar" aria-label="Bộ lọc nhanh vị trí">
+        <div class="filter-group">
+          <span class="filter-label">Vị trí</span>
+          <button type="button" class="chip-btn is-active" data-filter-group="role" data-filter-value="all">Tất cả</button>
+          <button type="button" class="chip-btn" data-filter-group="role" data-filter-value="khcn">KHCN</button>
+          <button type="button" class="chip-btn" data-filter-group="role" data-filter-value="khdn">KHDN</button>
+          <button type="button" class="chip-btn" data-filter-group="role" data-filter-value="it">CNTT</button>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">Khu vực</span>
+          <button type="button" class="chip-btn is-active" data-filter-group="region" data-filter-value="all">Tất cả</button>
+          <button type="button" class="chip-btn" data-filter-group="region" data-filter-value="toanquoc">Toàn quốc</button>
+          <button type="button" class="chip-btn" data-filter-group="region" data-filter-value="hcm">TP.HCM</button>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">Kinh nghiệm</span>
+          <button type="button" class="chip-btn is-active" data-filter-group="exp" data-filter-value="all">Tất cả</button>
+          <button type="button" class="chip-btn" data-filter-group="exp" data-filter-value="0-2">0–2 năm</button>
+          <button type="button" class="chip-btn" data-filter-group="exp" data-filter-value="1-3">1–3 năm</button>
+          <button type="button" class="chip-btn" data-filter-group="exp" data-filter-value="2+">2+ năm</button>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">Hiển thị</span>
+          <button type="button" class="chip-btn is-active" data-filter-group="display" data-filter-value="all">Tất cả</button>
+          <button type="button" class="chip-btn" data-filter-group="display" data-filter-value="featured">Nổi bật</button>
+        </div>
+      </div>
+
+      <div class="positions">
+
+        <div class="position-card" data-role="khcn" data-region="toanquoc" data-exp="0-2" data-featured="1">
+          <strong>CHUYÊN VIÊN KHÁCH HÀNG CÁ NHÂN</strong>
+          <p>Kinh doanh – Tư vấn – Chăm sóc khách hàng cá nhân</p>
+          <div class="meta-chips">
+            <span class="meta-chip">KHCN</span>
+            <span class="meta-chip">Toàn quốc</span>
+            <span class="meta-chip">0–2 năm</span>
+          </div>
+          <div class="btn-row">
+            <a href="https://forms.gle/QSaK3d41vF1qYH566" class="btn-primary btn-small" target="_blank" rel="noopener noreferrer">ỨNG TUYỂN</a>
+            <button type="button" class="btn-secondary btn-small js-open-modal" data-modal="modal-cvkhcn">XEM CHI TIẾT</button>
+          </div>
+        </div>
+
+        <div class="position-card" data-role="khdn" data-region="toanquoc" data-exp="1-3" data-featured="0">
+          <strong>CHUYÊN VIÊN KHÁCH HÀNG DOANH NGHIỆP</strong>
+          <p>Phát triển & quản lý khách hàng doanh nghiệp</p>
+          <div class="meta-chips">
+            <span class="meta-chip">KHDN</span>
+            <span class="meta-chip">Toàn quốc</span>
+            <span class="meta-chip">1–3 năm</span>
+          </div>
+          <div class="btn-row">
+            <a href="https://forms.gle/QSaK3d41vF1qYH566" class="btn-primary btn-small" target="_blank" rel="noopener noreferrer">ỨNG TUYỂN</a>
+            <button type="button" class="btn-secondary btn-small js-open-modal" data-modal="modal-cvkhdoanhnghiep">XEM CHI TIẾT</button>
+          </div>
+        </div>
+
+        <div class="position-card" data-role="it" data-region="hcm" data-exp="2+" data-featured="0">
+          <strong>CÔNG NGHỆ THÔNG TIN / NGÂN HÀNG SỐ</strong>
+          <p>Phát triển – Vận hành – Chuyển đổi số</p>
+          <div class="meta-chips">
+            <span class="meta-chip">CNTT</span>
+            <span class="meta-chip">TP.HCM</span>
+            <span class="meta-chip">2+ năm</span>
+          </div>
+          <div class="btn-row">
+            <a href="https://forms.gle/QSaK3d41vF1qYH566" class="btn-primary btn-small" target="_blank" rel="noopener noreferrer">ỨNG TUYỂN</a>
+            <button type="button" class="btn-secondary btn-small js-open-modal" data-modal="modal-cntt-nhso">XEM CHI TIẾT</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="why">
+      <h2>GIA NHẬP SACOMBANK</h2>
+      <div class="why-grid">
+        <div class="why-card">NGÂN HÀNG TMCP HÀNG ĐẦU VIỆT NAM</div>
+        <div class="why-card">LỘ TRÌNH PHÁT TRIỂN RÕ RÀNG</div>
+        <div class="why-card">LÀM VIỆC TRÊN TOÀN HỆ THỐNG</div>
+        <div class="why-card">MÔI TRƯỜNG CHUYÊN NGHIỆP & BỀN VỮNG</div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="container">
+      <h2>LỘ TRÌNH TUYỂN DỤNG</h2>
+      <div class="steps">
+        <div class="step">1. NỘP HỒ SƠ</div>
+        <div class="step">2. SÀNG LỌC</div>
+        <div class="step">3. PHỎNG VẤN</div>
+        <div class="step">4. THÔNG BÁO KẾT QUẢ</div>
+        <div class="step">5. NHẬN VIỆC</div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-final">
+      <h2>SẴN SÀNG GIA NHẬP SACOMBANK?</h2>
+      <p>ỨNG TUYỂN NGAY ĐỂ KHỞI ĐẦU SỰ NGHIỆP BỀN VỮNG CÙNG SACOMBANK.</p>
+      <a href="https://forms.gle/QSaK3d41vF1qYH566" class="btn-primary" target="_blank" rel="noopener noreferrer">NỘP HỒ SƠ NGAY</a>
+    </section>
+
+  </div>
+
+  <!-- =====================================================
+       POPUPS (XEM CHI TIẾT)
+       Bạn chỉ cần sửa nội dung mô tả trong từng popup bên dưới.
+       ===================================================== -->
+
+  <!-- CV KHCN -->
+  <div class="modal" id="modal-cvkhcn" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-overlay" data-close></div>
+    <div class="modal-dialog" role="document" aria-labelledby="modal-cvkhcn-title">
+      <div class="modal-header">
+        <h3 id="modal-cvkhcn-title">CHUYÊN VIÊN KHÁCH HÀNG CÁ NHÂN</h3>
+        <button class="modal-close" type="button" aria-label="Đóng" data-close>×</button>
+      </div>
+      <div class="modal-content">
+        <h4>Mô tả công việc</h4>
+        <ul>
+          <li>Tư vấn và cung cấp giải pháp sản phẩm/dịch vụ ngân hàng cho khách hàng cá nhân.</li>
+          <li>Chủ động tìm kiếm, phát triển khách hàng mới và chăm sóc danh mục khách hàng được phân công.</li>
+          <li>Thực hiện chỉ tiêu kinh doanh theo định hướng của Đơn vị.</li>
+        </ul>
+
+        <h4>Yêu cầu</h4>
+        <ul>
+          <li>Tốt nghiệp Cao đẳng/Đại học (ưu tiên các ngành Kinh tế, Tài chính – Ngân hàng, QTKD...).</li>
+          <li>Kỹ năng giao tiếp, tư vấn và đàm phán tốt; tinh thần chủ động và hướng kết quả.</li>
+          <li>Ưu tiên ứng viên có kinh nghiệm sales/tài chính/ngân hàng (có thể đào tạo nếu phù hợp).</li>
+        </ul>
+
+        <h4>Quyền lợi</h4>
+        <ul>
+          <li>Thu nhập cạnh tranh theo năng lực và kết quả kinh doanh.</li>
+          <li>Đào tạo bài bản, lộ trình phát triển rõ ràng trong hệ thống.</li>
+          <li>Chế độ phúc lợi theo quy định của Ngân hàng.</li>
+        </ul>
+      </div>
+      <div class="modal-actions">
+        <a href="https://forms.gle/QSaK3d41vF1qYH566" class="btn-primary btn-small" target="_blank" rel="noopener noreferrer">ỨNG TUYỂN NGAY</a>
+        <button type="button" class="btn-secondary btn-small" data-close>ĐÓNG</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CV KHDN -->
+  <div class="modal" id="modal-cvkhdoanhnghiep" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-overlay" data-close></div>
+    <div class="modal-dialog" role="document" aria-labelledby="modal-cvkhdoanhnghiep-title">
+      <div class="modal-header">
+        <h3 id="modal-cvkhdoanhnghiep-title">CHUYÊN VIÊN KHÁCH HÀNG DOANH NGHIỆP</h3>
+        <button class="modal-close" type="button" aria-label="Đóng" data-close>×</button>
+      </div>
+      <div class="modal-content">
+        <h4>Mô tả công việc</h4>
+        <ul>
+          <li>Phát triển, quản lý quan hệ khách hàng doanh nghiệp; tư vấn giải pháp tài chính phù hợp.</li>
+          <li>Thẩm định sơ bộ nhu cầu, phối hợp bộ phận liên quan để triển khai hồ sơ/giải ngân theo quy định.</li>
+          <li>Quản trị chất lượng danh mục, theo dõi sau bán và duy trì trải nghiệm khách hàng.</li>
+        </ul>
+
+        <h4>Yêu cầu</h4>
+        <ul>
+          <li>Tốt nghiệp Đại học (ưu tiên Tài chính – Ngân hàng, Kế toán, Kinh tế, QTKD...).</li>
+          <li>Có tư duy phân tích, hiểu biết cơ bản về tài chính doanh nghiệp; kỹ năng chăm sóc khách hàng.</li>
+          <li>Ưu tiên có kinh nghiệm KHDN/SME/B2B sales hoặc tín dụng.</li>
+        </ul>
+
+        <h4>Quyền lợi</h4>
+        <ul>
+          <li>Thu nhập theo năng lực; thưởng hiệu quả kinh doanh.</li>
+          <li>Môi trường chuyên nghiệp, cơ hội làm việc với khách hàng doanh nghiệp đa ngành.</li>
+          <li>Đào tạo nâng cao nghiệp vụ và lộ trình phát triển chuyên sâu.</li>
+        </ul>
+      </div>
+      <div class="modal-actions">
+        <a href="https://forms.gle/QSaK3d41vF1qYH566" class="btn-primary btn-small" target="_blank" rel="noopener noreferrer">ỨNG TUYỂN NGAY</a>
+        <button type="button" class="btn-secondary btn-small" data-close>ĐÓNG</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CNTT / NH SO -->
+  <div class="modal" id="modal-cntt-nhso" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-overlay" data-close></div>
+    <div class="modal-dialog" role="document" aria-labelledby="modal-cntt-nhso-title">
+      <div class="modal-header">
+        <h3 id="modal-cntt-nhso-title">CÔNG NGHỆ THÔNG TIN / NGÂN HÀNG SỐ</h3>
+        <button class="modal-close" type="button" aria-label="Đóng" data-close>×</button>
+      </div>
+      <div class="modal-content">
+        <h4>Mô tả công việc</h4>
+        <ul>
+          <li>Tham gia phát triển/vận hành hệ thống, sản phẩm số theo phân công (Dev/BA/Tester/Infra/Sec...).</li>
+          <li>Phối hợp cải tiến quy trình, nâng cao hiệu năng và trải nghiệm khách hàng trên kênh số.</li>
+          <li>Tuân thủ quy định an toàn thông tin và tiêu chuẩn vận hành hệ thống.</li>
+        </ul>
+
+        <h4>Yêu cầu</h4>
+        <ul>
+          <li>Tốt nghiệp Đại học các ngành CNTT/Khoa học máy tính/Hệ thống thông tin hoặc tương đương.</li>
+          <li>Có nền tảng về lập trình, hệ thống hoặc phân tích nghiệp vụ; tư duy logic tốt.</li>
+          <li>Ưu tiên ứng viên có kinh nghiệm mảng ngân hàng số/fintech hoặc vận hành hệ thống lớn.</li>
+        </ul>
+
+        <h4>Quyền lợi</h4>
+        <ul>
+          <li>Tham gia các dự án chuyển đổi số quy mô lớn; lộ trình phát triển nghề nghiệp rõ ràng.</li>
+          <li>Chế độ đãi ngộ cạnh tranh; môi trường làm việc hiện đại.</li>
+          <li>Được đào tạo và cập nhật công nghệ/khung năng lực theo vị trí.</li>
+        </ul>
+      </div>
+      <div class="modal-actions">
+        <a href="https://forms.gle/QSaK3d41vF1qYH566" class="btn-primary btn-small" target="_blank" rel="noopener noreferrer">ỨNG TUYỂN NGAY</a>
+        <button type="button" class="btn-secondary btn-small" data-close>ĐÓNG</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Sticky topbar state
+    (function () {
+      const topbar = document.getElementById('topbar');
+      const onScroll = () => {
+        if (!topbar) return;
+        topbar.classList.toggle('scrolled', window.scrollY > 8);
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+
+    
+
+    // Filter chips for positions
+    (function () {
+      const chips = document.querySelectorAll('.chip-btn[data-filter-group]');
+      const cards = Array.from(document.querySelectorAll('.position-card'));
+      if (!chips.length || !cards.length) return;
+
+      const state = { role: 'all', region: 'all', exp: 'all', display: 'all' };
+
+      function apply() {
+        cards.forEach((card) => {
+          const role = card.getAttribute('data-role') || '';
+          const region = card.getAttribute('data-region') || '';
+          const exp = card.getAttribute('data-exp') || '';
+          const featured = (card.getAttribute('data-featured') === '1');
+
+          let ok = true;
+          if (state.role !== 'all' && state.role !== role) ok = false;
+          if (state.region !== 'all' && state.region !== region) ok = false;
+          if (state.exp !== 'all' && state.exp !== exp) ok = false;
+          if (state.display === 'featured' && !featured) ok = false;
+
+          card.style.display = ok ? '' : 'none';
+        });
+      }
+
+      function setActive(btn) {
+        const group = btn.getAttribute('data-filter-group');
+        const value = btn.getAttribute('data-filter-value');
+        if (!group || !value) return;
+
+        state[group] = value;
+        document.querySelectorAll('.chip-btn[data-filter-group="' + group + '"]').forEach((b) => {
+          b.classList.toggle('is-active', b === btn);
+        });
+        apply();
+      }
+
+      chips.forEach((btn) => {
+        btn.addEventListener('click', () => setActive(btn));
+      });
+
+      apply();
+    })();
+
+
+    // Modal helpers
+    (function () {
+      const openButtons = document.querySelectorAll('.js-open-modal');
+      let activeModal = null;
+      let lastFocused = null;
+
+      function getFocusable(el) {
+        return el.querySelectorAll('a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])');
+      }
+
+      function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (!modal) return;
+
+        lastFocused = document.activeElement;
+        activeModal = modal;
+
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+
+        const focusables = getFocusable(modal);
+        if (focusables.length) focusables[0].focus();
+      }
+
+      function closeModal() {
+        if (!activeModal) return;
+
+        activeModal.classList.remove('is-open');
+        activeModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+
+        const toFocus = lastFocused;
+        activeModal = null;
+        lastFocused = null;
+
+        if (toFocus && typeof toFocus.focus === 'function') {
+          toFocus.focus();
+        }
+      }
+
+      // Open
+      openButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const id = btn.getAttribute('data-modal');
+          if (id) openModal(id);
+        });
+      });
+
+      // Close (overlay / close buttons)
+      document.addEventListener('click', (e) => {
+        const target = e.target;
+        if (!(target instanceof HTMLElement)) return;
+        if (target.hasAttribute('data-close')) {
+          closeModal();
+        }
+      });
+
+      // ESC to close
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeModal();
+          return;
+        }
+
+        // Focus trap
+        if (e.key === 'Tab' && activeModal) {
+          const focusables = Array.from(getFocusable(activeModal));
+          if (!focusables.length) return;
+
+          const first = focusables[0];
+          const last = focusables[focusables.length - 1];
+
+          if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+      });
+
+      // Close if clicking outside dialog (overlay)
+      document.addEventListener('mousedown', (e) => {
+        if (!activeModal) return;
+        const dialog = activeModal.querySelector('.modal-dialog');
+        if (!dialog) return;
+        if (e.target instanceof Node && !dialog.contains(e.target)) {
+          // only if clicked the overlay area (not inside dialog)
+          const overlay = activeModal.querySelector('.modal-overlay');
+          if (overlay && e.target === overlay) closeModal();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
