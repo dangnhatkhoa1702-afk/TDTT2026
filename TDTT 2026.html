@@ -1,550 +1,391 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tuyển Dụng Tập Trung - SACOMBANK 2026</title>
-    <style>
-        /* GIỮ NGUYÊN TOÀN BỘ CSS GỐC CỦA BẠN */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TUYỂN DỤNG TẬP TRUNG 2026 – ĐỢT 1 | SACOMBANK</title>
 
-        :root {
-            --sb-blue: #005EA6;
-            --sb-gold: #D7A44C;
-            --sb-gold-deep: #D8B25E;
-            --sb-gold-light: #FDF7BD;
-            --sb-white: #FFFFFF;
-            --sb-gray-light: #F8F9FA;
-            --sb-gray: #6C757D;
-            --sb-dark: #212529;
-            --sb-gold-gradient: linear-gradient(90deg, #D8B25E 0%, #FDF7BD 100%);
-        }
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-        body {
-            font-family: Arial, sans-serif;
-            color: var(--sb-dark);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+<style>
+/* =====================================================
+   SACOMBANK DESIGN SYSTEM
+   ===================================================== */
+:root {
+  --sb-blue:#005EA6;
+  --sb-gold:#D7A44C;
+  --sb-gold-deep:#D8B25E;
+  --sb-gold-light:#FDF7BD;
+  --sb-gold-gradient:linear-gradient(90deg,#D8B25E 0%,#FDF7BD 100%);
+  --bg:#F8FBFF;
+  --white:#fff;
+  --text:#0A2A4A;
+  --radius-lg:24px;
+  --radius-md:16px;
+  --radius-sm:10px;
+  --shadow-soft:0 8px 24px rgba(0,0,0,.06);
+  --shadow-strong:0 14px 40px rgba(0,0,0,.12);
+  --max-width:1100px;
+}
 
-        /* Typography */
-        h1, h2, h3 {
-            font-family: Arial, sans-serif;
-            font-weight: 700;
-            line-height: 1.2;
-        }
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:'Montserrat',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:40px 20px;
+}
+h1,h2{font-weight:800;margin:0 0 14px}
+h1{font-size:38px}
+h2{font-size:30px;color:var(--sb-blue)}
+p{margin:0 0 14px}
 
-        /* Hero Section */
-        .hero {
-            position: relative;
-            width: 100%;
-        }
+/* =====================================================
+   BUTTON
+   ===================================================== */
+.btn-primary{
+  display:inline-block;
+  padding:14px 32px;
+  border-radius:999px;
+  background:var(--sb-gold-gradient);
+  color:var(--sb-blue);
+  font-weight:800;
+  text-decoration:none;
+  box-shadow:0 6px 18px rgba(215,164,76,.45);
+  transition:.25s;
+}
+.btn-primary:hover{transform:translateY(-3px)}
+.btn-secondary{
+  display:inline-block;
+  padding:14px 26px;
+  border-radius:999px;
+  background:transparent;
+  color:var(--sb-blue);
+  font-weight:800;
+  border:2px solid rgba(0,94,166,.25);
+  cursor:pointer;
+}
+.btn-small{padding:10px 20px;font-size:13px}
 
-        .hero-banner {
-            width: 100%;
-            height: 70vh;
-            min-height: 500px;
-            max-height: 800px;
-            background-image: url('https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TDTT2026/main/banner.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
-        }
+/* =====================================================
+   TOPBAR
+   ===================================================== */
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:999;
+  background:rgba(255,255,255,.9);
+  backdrop-filter:blur(10px);
+  box-shadow:0 6px 20px rgba(0,0,0,.08);
+}
+.topbar-inner{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:14px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.topbar-title{
+  font-weight:900;
+  letter-spacing:1px;
+  color:var(--sb-blue);
+  text-decoration:none;
+  font-size:13px;
+}
+.topbar-right{display:flex;gap:12px}
 
-        .hero-cta-section {
-            background: var(--sb-white);
-            padding: 40px 20px;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+/* =====================================================
+   HERO BANNER
+   ===================================================== */
+.hero-banner{
+  max-width:var(--max-width);
+  margin:20px auto 0;
+  height:240px;
+  border-radius:var(--radius-lg);
+  background:#eaf2fb;
+  border:2px dashed rgba(0,94,166,.25);
+}
 
-        .cta-primary {
-            background: var(--sb-gold-gradient);
-            color: var(--sb-blue);
-            font-family: Arial, sans-serif;
-            font-size: clamp(1.1rem, 1.8vw + 0.3rem, 1.3rem);
-            font-weight: 700;
-            padding: 20px 56px;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 8px 24px rgba(215, 164, 76, 0.4);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            position: relative;
-            animation: pulse-glow 2s ease-in-out infinite;
-        }
+/* =====================================================
+   HERO
+   ===================================================== */
+.hero{
+  background:var(--sb-blue);
+  color:var(--sb-gold);
+  padding:64px 48px;
+  margin-top:24px;
+  border-radius:var(--radius-lg);
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:40px;
+  box-shadow:var(--shadow-strong);
+}
+.hero h1,.hero p{color:var(--sb-gold)}
+.hero img{
+  width:100%;
+  border-radius:20px;
+}
 
-        .cta-primary:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 12px 40px rgba(215, 164, 76, 0.6);
-            animation: none;
-        }
+/* =====================================================
+   POSITIONS
+   ===================================================== */
+.positions{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+  margin-top:36px;
+}
+.position-card{
+  background:var(--white);
+  padding:32px 26px;
+  border-radius:var(--radius-md);
+  box-shadow:var(--shadow-soft);
+  text-align:center;
+  border-top:4px solid var(--sb-gold);
+}
+.position-card strong{
+  display:block;
+  font-size:18px;
+  margin-bottom:8px;
+  color:var(--sb-blue);
+}
+.meta-chips{
+  display:flex;
+  gap:8px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.meta-chip{
+  font-size:12px;
+  font-weight:800;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid rgba(0,94,166,.16);
+  background:#f4f8ff;
+}
+.btn-row{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  margin-top:16px;
+}
 
-        @keyframes pulse-glow {
-            0%, 100% {
-                box-shadow: 0 8px 24px rgba(215, 164, 76, 0.4),
-                            0 0 0 0 rgba(215, 164, 76, 0.7);
-            }
-            50% {
-                box-shadow: 0 8px 32px rgba(215, 164, 76, 0.6),
-                            0 0 20px 10px rgba(215, 164, 76, 0);
-            }
-        }
+/* =====================================================
+   BENEFITS
+   ===================================================== */
+.why{
+  background:var(--white);
+  border-radius:var(--radius-lg);
+  padding:48px;
+  margin-top:70px;
+  box-shadow:var(--shadow-soft);
+}
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:24px;
+}
+.why-card{
+  background:#f5f9ff;
+  padding:22px;
+  border-radius:var(--radius-md);
+  border-left:4px solid var(--sb-gold);
+  font-weight:600;
+}
 
-        /* Section Styles */
-        section {
-            padding: 60px 40px;
-        }
+/* =====================================================
+   PROCESS
+   ===================================================== */
+.steps{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:22px;
+  margin-top:30px;
+}
+.step{
+  background:var(--white);
+  padding:22px;
+  border-radius:var(--radius-md);
+  box-shadow:var(--shadow-soft);
+  text-align:center;
+  font-weight:700;
+  color:var(--sb-blue);
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+/* =====================================================
+   FAQ
+   ===================================================== */
+.faq-item{
+  background:var(--white);
+  border-radius:var(--radius-md);
+  box-shadow:var(--shadow-soft);
+  padding:20px;
+  margin-bottom:14px;
+}
+.faq-item summary{
+  font-weight:800;
+  cursor:pointer;
+}
 
-        .section-title {
-            font-size: clamp(2rem, 4vw, 3rem);
-            text-align: center;
-            margin-bottom: 64px;
-            color: var(--sb-blue);
-            position: relative;
-        }
+/* =====================================================
+   CTA FINAL
+   ===================================================== */
+.cta-final{
+  background:var(--sb-blue);
+  color:var(--sb-gold);
+  padding:56px 32px;
+  border-radius:var(--radius-lg);
+  text-align:center;
+  margin-top:80px;
+}
+.cta-final h2,.cta-final p{color:var(--sb-gold)}
 
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: var(--sb-gold-gradient);
-            margin: 24px auto 0;
-            border-radius: 2px;
-        }
-
-        /* Program Introduction */
-        .program-intro {
-            background: var(--sb-white);
-            padding: 50px 40px;
-        }
-
-        .intro-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 48px;
-            align-items: center;
-        }
-
-        .intro-image {
-            width: 100%;
-            height: 500px;
-            background-image: url('https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TDTT2026/main/hero.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            border-radius: 16px;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 94, 166, 0.2);
-        }
-
-        .intro-card-wrapper {
-            background: var(--sb-white);
-            border: 3px solid var(--sb-gold);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 8px 32px rgba(215, 164, 76, 0.15);
-        }
-
-        .intro-highlight {
-            background: var(--sb-gold-gradient);
-            color: var(--sb-blue);
-            padding: 3px 12px;
-            border-radius: 4px;
-            font-weight: 700;
-        }
-
-        /* Positions Section */
-        .positions-section {
-            background: var(--sb-white);
-        }
-
-        .positions {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 32px;
-        }
-
-        .position-card {
-            background: var(--sb-white);
-            border-radius: 16px;
-            padding: 40px 32px;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            text-align: center;
-        }
-
-        .position-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 48px rgba(0, 94, 166, 0.15);
-            border-color: var(--sb-gold);
-        }
-
-        .position-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--sb-gold-gradient);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 40px;
-            margin: 0 auto 24px;
-        }
-
-        .btn-row {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .btn {
-            padding: 12px 24px;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s ease;
-            border: 2px solid;
-            cursor: pointer;
-            font-size: 14px;
-            text-align: center;
-        }
-
-        .btn-primary {
-            background: var(--sb-gold-gradient);
-            color: var(--sb-blue);
-            border-color: transparent;
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--sb-blue);
-            border-color: var(--sb-blue);
-        }
-
-        /* Timeline & Benefits Section */
-        .benefits-section { background: var(--sb-blue); color: var(--sb-white); }
-        .benefits-section .section-title { color: var(--sb-gold); }
-        .benefit-card { background: var(--sb-white); padding: 32px; border-radius: 12px; }
-        .benefit-card h3 { color: var(--sb-blue); }
-        .benefit-card p { color: var(--sb-gray); }
-
-        .timeline-section { background: var(--sb-gray-light); }
-        .timeline-number { background: var(--sb-gold-gradient); color: var(--sb-blue); border-radius: 50%; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; font-weight: 700; }
-
-        .faq-item.active .faq-answer { max-height: 500px; padding: 0 32px 24px; }
-        .faq-question { cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 24px 32px; color: var(--sb-blue); font-weight: 600; }
-        .faq-answer { max-height: 0; overflow: hidden; transition: all 0.3s ease; padding: 0 32px; }
-
-        .cta-footer { background: var(--sb-blue); color: var(--sb-white); text-align: center; padding: 80px 40px; }
-
-        /* --- PHẦN CSS BỔ SUNG CHO POPUP (MODAL) --- */
-        .recruit-modal {
-            display: none; /* Ẩn mặc định */
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            z-index: 9999;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        .recruit-modal.active {
-            display: flex;
-        }
-        .modal-overlay {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(3px);
-        }
-        .modal-content {
-            position: relative;
-            background: white;
-            width: 100%;
-            max-width: 600px;
-            max-height: 90vh;
-            border-radius: 20px;
-            padding: 40px;
-            overflow-y: auto;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-            text-align: left; /* Căn lề trái cho nội dung JD */
-        }
-        .close-btn {
-            position: absolute;
-            top: 15px; right: 20px;
-            font-size: 30px;
-            cursor: pointer;
-            color: var(--sb-gray);
-            line-height: 1;
-        }
-        .modal-content h3 { color: var(--sb-blue); margin-bottom: 20px; font-size: 22px; border-bottom: 2px solid var(--sb-gold); padding-bottom: 10px; }
-        .modal-content p { margin-bottom: 10px; }
-        .modal-content ul { margin-bottom: 20px; padding-left: 20px; }
-        .modal-content li { margin-bottom: 8px; }
-        .cta-box { text-align: center; margin-top: 30px; }
-        .cta-btn { 
-            background: var(--sb-gold-gradient); 
-            color: var(--sb-blue); 
-            padding: 14px 35px; 
-            border-radius: 50px; 
-            text-decoration: none; 
-            font-weight: 700;
-            display: inline-block;
-        }
-
-        /* Responsive Fix */
-        @media (max-width: 968px) {
-            .intro-wrapper { grid-template-columns: 1fr; }
-            .hero-banner { height: 50vh; }
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;text-align:center}
+  h1{font-size:32px}
+}
+</style>
 </head>
+
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-banner"></div>
-        <div class="hero-cta-section">
-            <a href="#apply" class="cta-primary">ỨNG TUYỂN NGAY</a>
-        </div>
-    </section>
 
-    <!-- Program Introduction -->
-    <section class="program-intro">
-        <div class="container">
-            <div class="intro-wrapper">
-                <div class="intro-image"></div>
-                <div class="intro-card-wrapper">
-                    <div class="intro-content">
-                        <h2>
-                            <span class="intro-highlight">KHAI XUÂN ĐÚNG HƯỚNG</span><br>
-                            <span class="intro-highlight">VỮNG BƯỚC CẢ NĂM</span>
-                        </h2>
-                        <p style="font-size: 1.25rem; font-weight: 600; color: var(--sb-blue); margin-top: 24px;">TUYỂN DỤNG ĐỒNG LOẠT CÁC VỊ TRÍ</p>
-                        <p><strong>Kinh doanh – Dịch vụ – Công nghệ</strong><br>Trên toàn hệ thống SACOMBANK</p>
-                        <p style="margin-top: 24px;">Gia nhập đội ngũ hơn 13,000 cán bộ nhân viên chuyên nghiệp, cùng SACOMBANK kiến tạo tương lai tài chính bền vững cho hàng triệu khách hàng.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<header class="topbar">
+  <div class="topbar-inner">
+    <span class="topbar-title">TUYỂN DỤNG TẬP TRUNG SACOMBANK</span>
+    <div class="topbar-right">
+      <a href="#positions" class="topbar-title">VỊ TRÍ TUYỂN DỤNG</a>
+      <a href="https://forms.gle/QSaK3d41vF1qYH566" class="btn-primary btn-small" target="_blank">ỨNG TUYỂN NGAY</a>
+    </div>
+  </div>
+</header>
 
-    <!-- Positions -->
-    <section class="positions-section" id="apply">
-        <div class="container">
-            <h2 class="section-title">VỊ TRÍ TUYỂN DỤNG</h2>
-            <div class="positions">
-                
-                <div class="position-card">
-                    <div class="position-icon">👥</div>
-                    <h3>Chuyên viên</h3>
-                    <p>KHÁCH HÀNG CÁ NHÂN</p>
-                    <p class="position-description">Phát triển và chăm sóc khách hàng cá nhân, tư vấn sản phẩm tài chính.</p>
-                    <div class="meta-chips">
-                        <span class="meta-chip">KHCN</span>
-                        <span class="meta-chip">Toàn quốc</span>
-                    </div>
-                    <div class="btn-row">
-                        <a href="https://forms.gle/QSaK3d41vF1qYH566" class="btn btn-primary" target="_blank">ỨNG TUYỂN</a>
-                        <button type="button" class="btn btn-secondary js-open-modal" data-modal="modal-personal">XEM CHI TIẾT</button>
-                    </div>
-                </div>
+<div class="hero-banner"></div>
 
-                <div class="position-card">
-                    <div class="position-icon">🏢</div>
-                    <h3>Chuyên viên</h3>
-                    <p>KHÁCH HÀNG DOANH NGHIỆP</p>
-                    <p class="position-description">Tư vấn và phát triển danh mục khách hàng doanh nghiệp.</p>
-                    <div class="meta-chips">
-                        <span class="meta-chip">KHDN</span>
-                        <span class="meta-chip">Toàn quốc</span>
-                    </div>
-                    <div class="btn-row">
-                        <a href="https://forms.gle/QSaK3d41vF1qYH566" class="btn btn-primary" target="_blank">ỨNG TUYỂN</a>
-                        <button type="button" class="btn btn-secondary js-open-modal" data-modal="modal-business">XEM CHI TIẾT</button>
-                    </div>
-                </div>
+<div class="container">
 
-                <div class="position-card">
-                    <div class="position-icon">💻</div>
-                    <h3>Chuyên viên</h3>
-                    <p>CÔNG NGHỆ THÔNG TIN / NGÂN HÀNG SỐ</p>
-                    <p class="position-description">Tham gia phát triển giải pháp ngân hàng số, hỗ trợ vận hành hệ thống.</p>
-                    <div class="meta-chips">
-                        <span class="meta-chip">CNTT</span>
-                        <span class="meta-chip">TP.HCM</span>
-                    </div>
-                    <div class="btn-row">
-                        <a href="https://forms.gle/QSaK3d41vF1qYH566" class="btn btn-primary" target="_blank">ỨNG TUYỂN</a>
-                        <button type="button" class="btn btn-secondary js-open-modal" data-modal="modal-it">XEM CHI TIẾT</button>
-                    </div>
-                </div>
+<section class="hero">
+  <div>
+    <h1>KHAI XUÂN ĐÚNG HƯỚNG<br>VỮNG BƯỚC CẢ NĂM</h1>
+    <p>
+      TUYỂN DỤNG ĐỒNG LOẠT CÁC VỊ TRÍ KINH DOANH – DỊCH VỤ – CÔNG NGHỆ
+      TRÊN TOÀN HỆ THỐNG SACOMBANK.
+    </p>
+    <a href="https://forms.gle/QSaK3d41vF1qYH566" class="btn-primary" target="_blank">NỘP HỒ SƠ NGAY</a>
+  </div>
+  <img src="https://raw.githubusercontent.com/dangnhatkhoa1702-afk/TTV-TN-2026/main/OPTION-2.1.jpg" alt="">
+</section>
 
-            </div>
-        </div>
-    </section>
+<section id="positions">
+  <h2>VỊ TRÍ ĐANG TUYỂN</h2>
 
-    <!-- Các section khác giữ nguyên... (Benefits, Timeline, FAQ, Footer) -->
-    <section class="benefits-section">
-        <div class="container">
-            <h2 class="section-title">GIA NHẬP SACOMBANK</h2>
-            <div class="benefits-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
-                <div class="benefit-card"><div class="benefit-icon" style="font-size:48px; margin-bottom:16px;">📚</div><h3>Đào Tạo Bài Bản</h3><p>Chương trình đào tạo hội nhập kết hợp đào tạo nghiệp vụ chuyên sâu.</p></div>
-                <div class="benefit-card"><div class="benefit-icon" style="font-size:48px; margin-bottom:16px;">🚀</div><h3>Lộ Trình Nghề Nghiệp</h3><p>Định hướng phát triển rõ ràng, đúng năng lực.</p></div>
-                <div class="benefit-card"><div class="benefit-icon" style="font-size:48px; margin-bottom:16px;">💰</div><h3>Thu Nhập Cạnh Tranh</h3><p>Cơ chế lương thưởng minh bạch, hấp dẫn.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-footer">
-        <div class="container">
-            <h2>SẴN SÀNG KHỞI ĐẦU HÀNH TRÌNH?</h2>
-            <p>Gia nhập SACOMBANK - Nơi tài năng được tỏa sáng</p>
-            <a href="#apply" class="cta-primary">ỨNG TUYỂN NGAY</a>
-        </div>
-    </section>
-
-    <!-- --- CÁC POPUP (MODAL) NHƯ BẠN YÊU CẦU --- -->
-
-    <!-- Modal JD - KHCN -->
-    <div class="recruit-modal" id="modal-personal">
-        <div class="modal-overlay" onclick="closeRecruitModal()"></div>
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeRecruitModal()">×</span>
-            <h3>Chuyên viên Khách hàng Cá nhân</h3>
-            <p><strong>Mô tả công việc:</strong></p>
-            <ul>
-                <li>Tìm kiếm, tư vấn và chăm sóc khách hàng cá nhân.</li>
-                <li>Hỗ trợ khách hàng mở tài khoản, sử dụng dịch vụ ngân hàng.</li>
-                <li>Phối hợp thực hiện các chương trình bán hàng.</li>
-            </ul>
-            <p><strong>Yêu cầu:</strong></p>
-            <ul>
-                <li>Sinh viên năm cuối hoặc sẽ tốt nghiệp trong năm 2026 các ngành Kinh tế, Tài chính – Ngân hàng, Kế toán, Quản trị kinh doanh.</li>
-                <li>Kỹ năng giao tiếp tốt, ngoại hình ưa nhìn là lợi thế.</li>
-            </ul>
-            <div class="cta-box">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScuStWdnMHcKdUSnWEase5wZrE3S9Pb8XpK8pneN13JxGdzNA/viewform" target="_blank" class="cta-btn">Nộp đơn ngay</a>
-            </div>
-        </div>
+  <div class="positions">
+    <div class="position-card">
+      <strong>CHUYÊN VIÊN KHÁCH HÀNG CÁ NHÂN</strong>
+      <p>Kinh doanh – Tư vấn – Chăm sóc khách hàng cá nhân</p>
+      <div class="meta-chips">
+        <span class="meta-chip">KHCN</span>
+        <span class="meta-chip">Toàn quốc</span>
+        <span class="meta-chip">0–2 năm</span>
+      </div>
+      <div class="btn-row">
+        <a class="btn-primary btn-small" href="https://forms.gle/QSaK3d41vF1qYH566" target="_blank">ỨNG TUYỂN</a>
+      </div>
     </div>
 
-    <!-- Modal JD - KHDN -->
-    <div class="recruit-modal" id="modal-business">
-        <div class="modal-overlay" onclick="closeRecruitModal()"></div>
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeRecruitModal()">×</span>
-            <h3>Chuyên viên Khách hàng <br> Doanh nghiệp</h3>
-            <p><strong>Mô tả công việc:</strong></p>
-            <ul>
-                <li>Phát triển và quản lý danh mục khách hàng doanh nghiệp.</li>
-                <li>Tư vấn sản phẩm tín dụng, huy động vốn và dịch vụ tài chính.</li>
-                <li>Đàm phán, ký kết hợp đồng với doanh nghiệp.</li>
-            </ul>
-            <p><strong>Yêu cầu:</strong></p>
-            <ul>
-                <li>Sinh viên năm cuối hoặc sẽ tốt nghiệp trong năm 2026 các ngành Kinh tế, Tài chính – Ngân hàng, Kế toán, Quản trị kinh doanh.</li>
-                <li>Kỹ năng đàm phán, phân tích tài chính tốt.</li>
-            </ul>
-            <div class="cta-box">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScuStWdnMHcKdUSnWEase5wZrE3S9Pb8XpK8pneN13JxGdzNA/viewform" target="_blank" class="cta-btn">Nộp đơn ngay</a>
-            </div>
-        </div>
+    <div class="position-card">
+      <strong>CHUYÊN VIÊN KHÁCH HÀNG DOANH NGHIỆP</strong>
+      <p>Phát triển & quản lý khách hàng doanh nghiệp</p>
+      <div class="meta-chips">
+        <span class="meta-chip">KHDN</span>
+        <span class="meta-chip">Toàn quốc</span>
+        <span class="meta-chip">1–3 năm</span>
+      </div>
+      <div class="btn-row">
+        <a class="btn-primary btn-small" href="https://forms.gle/QSaK3d41vF1qYH566" target="_blank">ỨNG TUYỂN</a>
+      </div>
     </div>
 
-    <!-- Modal JD - IT -->
-    <div class="recruit-modal" id="modal-it">
-        <div class="modal-overlay" onclick="closeRecruitModal()"></div>
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeRecruitModal()">×</span>
-            <h3>Công nghệ thông tin / Ngân hàng số</h3>
-            <p><strong>Mô tả công việc:</strong></p>
-            <ul>
-                <li>Tham gia xây dựng, vận hành các giải pháp công nghệ ngân hàng.</li>
-                <li>Phát triển ứng dụng, website, hệ thống thanh toán.</li>
-                <li>Phối hợp triển khai sản phẩm ngân hàng số mới.</li>
-            </ul>
-            <p><strong>Yêu cầu:</strong></p>
-            <ul>
-                <li>Sinh viên năm cuối hoặc sẽ tốt nghiệp trong năm 2026 các Chuyên ngành Công nghệ thông tin, Kỹ thuật phần mềm hoặc tương đương.</li>
-                <li>Biết ngôn ngữ lập trình, kỹ năng teamwork tốt.</li>
-            </ul>
-            <div class="cta-box">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScuStWdnMHcKdUSnWEase5wZrE3S9Pb8XpK8pneN13JxGdzNA/viewform" target="_blank" class="cta-btn">Nộp đơn ngay</a>
-            </div>
-        </div>
+    <div class="position-card">
+      <strong>CÔNG NGHỆ THÔNG TIN / NGÂN HÀNG SỐ</strong>
+      <p>Phát triển – Vận hành – Chuyển đổi số</p>
+      <div class="meta-chips">
+        <span class="meta-chip">CNTT</span>
+        <span class="meta-chip">TP.HCM</span>
+        <span class="meta-chip">2+ năm</span>
+      </div>
+      <div class="btn-row">
+        <a class="btn-primary btn-small" href="https://forms.gle/QSaK3d41vF1qYH566" target="_blank">ỨNG TUYỂN</a>
+      </div>
     </div>
+  </div>
+</section>
 
-    <script>
-        // Xử lý mở Modal
-        const modalBtns = document.querySelectorAll('.js-open-modal');
-        modalBtns.forEach(btn => {
-            btn.onclick = function() {
-                const modalId = this.getAttribute('data-modal');
-                const modal = document.getElementById(modalId);
-                if(modal) {
-                    modal.classList.add('active');
-                    document.body.style.overflow = 'hidden'; // Chặn cuộn trang
-                }
-            }
-        });
+<section class="why">
+  <h2>GIA NHẬP SACOMBANK</h2>
+  <div class="why-grid">
+    <div class="why-card">ĐÀO TẠO BÀI BẢN, CHUYÊN SÂU THEO VỊ TRÍ</div>
+    <div class="why-card">LỘ TRÌNH NGHỀ NGHIỆP RÕ RÀNG</div>
+    <div class="why-card">THU NHẬP CẠNH TRANH</div>
+    <div class="why-card">PHÚC LỢI CHUẨN NGÂN HÀNG</div>
+    <div class="why-card">540 ĐIỂM GIAO DỊCH TOÀN QUỐC</div>
+    <div class="why-card">MÔI TRƯỜNG GẮN KẾT – ĐỒNG HÀNH</div>
+  </div>
+</section>
 
-        // Hàm đóng Modal
-        function closeRecruitModal() {
-            document.querySelectorAll('.recruit-modal').forEach(m => m.classList.remove('active'));
-            document.body.style.overflow = 'auto'; // Mở lại cuộn trang
-        }
+<section>
+  <h2>LỘ TRÌNH TUYỂN DỤNG</h2>
+  <div class="steps">
+    <div class="step">1. NỘP HỒ SƠ</div>
+    <div class="step">2. SƠ TUYỂN</div>
+    <div class="step">3. PHỎNG VẤN</div>
+    <div class="step">4. THÔNG BÁO KẾT QUẢ</div>
+    <div class="step">5. NHẬN VIỆC</div>
+  </div>
+</section>
 
-        // Đóng bằng phím ESC
-        document.addEventListener('keydown', (e) => {
-            if (e.key === "Escape") closeRecruitModal();
-        });
+<section>
+  <h2>HỎI – ĐÁP CÙNG SACOMBANK</h2>
 
-        // Giữ nguyên các Script cũ của bạn (Smooth Scroll, Animation...)
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) target.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
+  <details class="faq-item">
+    <summary>SACOMBANK có tuyển ứng viên chưa có kinh nghiệm không?</summary>
+    <p>Có, tùy theo vị trí và khu vực tuyển dụng.</p>
+  </details>
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
-            });
-        }, { threshold: 0.1 });
+  <details class="faq-item">
+    <summary>Tôi có thể chọn khu vực làm việc không?</summary>
+    <p>Có, bạn chọn khu vực ngay khi ứng tuyển.</p>
+  </details>
 
-        document.querySelectorAll('.position-card, .benefit-card').forEach(el => observer.observe(el));
-    </script>
+  <details class="faq-item">
+    <summary>Tôi có cần nộp hồ sơ bản cứng không?</summary>
+    <p>Không, chỉ cần CV online.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Tôi có thể ứng tuyển nhiều vị trí không?</summary>
+    <p>Có, hệ thống sẽ ưu tiên vị trí phù hợp nhất.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Thông tin ứng viên có được bảo mật không?</summary>
+    <p>Có, theo chính sách bảo mật của SACOMBANK.</p>
+  </details>
+</section>
+
+<section class="cta-final">
+  <h2>SẴN SÀNG GIA NHẬP SACOMBANK?</h2>
+  <p>ỨNG TUYỂN NGAY ĐỂ KHỞI ĐẦU SỰ NGHIỆP BỀN VỮNG.</p>
+  <a href="https://forms.gle/QSaK3d41vF1qYH566" class="btn-primary" target="_blank">NỘP HỒ SƠ NGAY</a>
+</section>
+
+</div>
+
 </body>
 </html>
