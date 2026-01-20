@@ -75,82 +75,7 @@
 
     p { margin: 0 0 14px; }
 
-    /* =====================================================
-       TOP SCROLL BAR (STICKY NAV)
-       ===================================================== */
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      background: rgba(248, 251, 255, 0.78);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(10, 42, 74, 0.08);
-      transition: .25s;
-    }
-
-    .topbar.scrolled {
-      background: rgba(255, 255, 255, 0.9);
-      box-shadow: 0 10px 30px rgba(0,0,0,.08);
-    }
-
-    .topbar-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 14px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    .topbar-right {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      white-space: nowrap;
-    }
-
-    .topbar-logo {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      color: var(--sb-blue);
-      font-weight: 900;
-      letter-spacing: .8px;
-      white-space: nowrap;
-    }
-
-    .topbar-logo-img {
-      height: 26px;
-      width: auto;
-      display: block;
-    }
-
-    .topbar-logo .mark {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--sb-gold-gradient);
-      box-shadow: 0 6px 18px rgba(215,164,76,.35);
-    }
-
-    .topbar-title {
-      text-decoration: none;
-      font-weight: 900;
-      color: var(--sb-blue);
-      letter-spacing: 1px;
-      font-size: 13px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(0,94,166,.18);
-      background: rgba(255,255,255,.55);
-    }
-
-    .topbar-cta {
-      /* kept for backwards compatibility; layout handled by .topbar-right */
-    }
+  
 
     /* =====================================================
        BUTTON
@@ -465,13 +390,8 @@
       }
       h1 { font-size: 32px; }
       h2 { font-size: 26px; }
-      .topbar-inner {
-        flex-direction: column;
-        gap: 10px;
-        padding: 12px 16px;
-        text-align: center;
-      }
-      .topbar-right { justify-content: center; flex-wrap: wrap; }
+      
+     
       .modal-dialog {
         width: calc(100% - 24px);
         margin: 10vh auto 0;
@@ -822,43 +742,7 @@
   </div>
 
   <script>
-    // Sticky topbar state
-    (function () {
-      const topbar = document.getElementById('topbar');
-      const onScroll = () => {
-        if (!topbar) return;
-        topbar.classList.toggle('scrolled', window.scrollY > 8);
-      };
-      window.addEventListener('scroll', onScroll, { passive: true });
-      onScroll();
-    })();
-
-    
-
-    // Filter chips for positions
-    (function () {
-      const chips = document.querySelectorAll('.chip-btn[data-filter-group]');
-      const cards = Array.from(document.querySelectorAll('.position-card'));
-      if (!chips.length || !cards.length) return;
-
-      const state = { role: 'all', region: 'all', exp: 'all', display: 'all' };
-
-      function apply() {
-        cards.forEach((card) => {
-          const role = card.getAttribute('data-role') || '';
-          const region = card.getAttribute('data-region') || '';
-          const exp = card.getAttribute('data-exp') || '';
-          const featured = (card.getAttribute('data-featured') === '1');
-
-          let ok = true;
-          if (state.role !== 'all' && state.role !== role) ok = false;
-          if (state.region !== 'all' && state.region !== region) ok = false;
-          if (state.exp !== 'all' && state.exp !== exp) ok = false;
-          if (state.display === 'featured' && !featured) ok = false;
-
-          card.style.display = ok ? '' : 'none';
-        });
-      }
+     
 
       function setActive(btn) {
         const group = btn.getAttribute('data-filter-group');
